@@ -37,11 +37,10 @@ typedef NS_ENUM(NSUInteger, FYResponseSerializer) {
 };
 
 /** 请求成功的Block */
-typedef void(^FYHttpRequestSuccess)(id responseObject);
+typedef void(^FYHttpRequestSuccess)(id response);
 
-/** 请求失败的Block */
-typedef void(^FYHttpRequestFailed)(NSError *error);
-
+/** 请求失败的Block ,有缓存返回的是缓存,没有返回的是error*/
+typedef void(^FYHttpRequestFailed)(id response);
 /** 上传或者下载的进度, Progress.completedUnitCount:当前大小 - Progress.totalUnitCount:总大小*/
 typedef void (^FYHttpProgress)(NSProgress *progress);
 
