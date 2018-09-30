@@ -3,6 +3,7 @@ platform :ios, '9.0'
 
 target 'FYNetWorkHelper' do
 pod 'AFNetworking'
-pod 'YYCache' 
+pod 'YYCache'
+pod 'PPNetworkHelper'
  
 end
