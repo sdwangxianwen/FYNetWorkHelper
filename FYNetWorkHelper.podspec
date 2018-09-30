@@ -16,7 +16,7 @@ s.homepage            = "https://github.com/sdwangxianwen/FYNetWorkHelper"
 s.license             = { :type => "Copyright", :text => "Copyright 2011 - 2018 UMeng.com. All rights reserved.\n" }
 s.author             = { "wangwen" => "x870183756@qq.com" }
 s.platform            = :ios, "9.0"
-s.source              = { :git => "git@github.com:sdwangxianwen/FYNetWorkHelper.git", :tag => s.version }
+s.source              = { :git => "https://github.com/sdwangxianwen/FYNetWorkHelper.git", :tag => s.version }
 s.source_files        = "FYNetWorkHelper/FYNetTool/*.{h,m}"
 
 s.dependency          "AFNetworking"
