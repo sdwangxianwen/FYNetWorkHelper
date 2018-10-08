@@ -15,7 +15,8 @@
 		211E7EF12160ADF6005C5302 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 211E7EF02160ADF6005C5302 /* Assets.xcassets */; };
 		211E7EF42160ADF6005C5302 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 211E7EF22160ADF6005C5302 /* LaunchScreen.storyboard */; };
 		211E7EF72160ADF6005C5302 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 211E7EF62160ADF6005C5302 /* main.m */; };
-		211E7F142160D65D005C5302 /* FYNetWorkHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 211E7F132160D65D005C5302 /* FYNetWorkHelper.m */; };
+		21F7703D216B427200B1AFA3 /* FYNetWorkHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F77039216B427200B1AFA3 /* FYNetWorkHelper.m */; };
+		21F7703E216B427200B1AFA3 /* FYNetWorkCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F7703A216B427200B1AFA3 /* FYNetWorkCache.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,8 +33,10 @@
 		211E7EF52160ADF6005C5302 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		211E7EF62160ADF6005C5302 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		211E7F012160B038005C5302 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		211E7F122160D65D005C5302 /* FYNetWorkHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYNetWorkHelper.h; sourceTree = "<group>"; };
-		211E7F132160D65D005C5302 /* FYNetWorkHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FYNetWorkHelper.m; sourceTree = "<group>"; };
+		21F77039216B427200B1AFA3 /* FYNetWorkHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FYNetWorkHelper.m; sourceTree = "<group>"; };
+		21F7703A216B427200B1AFA3 /* FYNetWorkCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FYNetWorkCache.m; sourceTree = "<group>"; };
+		21F7703B216B427200B1AFA3 /* FYNetWorkCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYNetWorkCache.h; sourceTree = "<group>"; };
+		21F7703C216B427200B1AFA3 /* FYNetWorkHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYNetWorkHelper.h; sourceTree = "<group>"; };
 		F643662FA33280E9C823140C /* Pods-FYNetWorkHelper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FYNetWorkHelper.release.xcconfig"; path = "Pods/Target Support Files/Pods-FYNetWorkHelper/Pods-FYNetWorkHelper.release.xcconfig"; sourceTree = "<group>"; };
 		FD640C1FB6040AF7BF3A53AE /* libPods-FYNetWorkHelper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FYNetWorkHelper.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -90,8 +93,10 @@
 		211E7EFD2160AF07005C5302 /* FYNetTool */ = {
 			isa = PBXGroup;
 			children = (
-				211E7F122160D65D005C5302 /* FYNetWorkHelper.h */,
-				211E7F132160D65D005C5302 /* FYNetWorkHelper.m */,
+				21F7703B216B427200B1AFA3 /* FYNetWorkCache.h */,
+				21F7703A216B427200B1AFA3 /* FYNetWorkCache.m */,
+				21F7703C216B427200B1AFA3 /* FYNetWorkHelper.h */,
+				21F77039216B427200B1AFA3 /* FYNetWorkHelper.m */,
 			);
 			path = FYNetTool;
 			sourceTree = "<group>";
@@ -207,8 +212,9 @@
 			files = (
 				211E7EE92160ADF4005C5302 /* ViewController.m in Sources */,
 				211E7EEF2160ADF4005C5302 /* FYNetWorkHelper.xcdatamodeld in Sources */,
-				211E7F142160D65D005C5302 /* FYNetWorkHelper.m in Sources */,
+				21F7703D216B427200B1AFA3 /* FYNetWorkHelper.m in Sources */,
 				211E7EF72160ADF6005C5302 /* main.m in Sources */,
+				21F7703E216B427200B1AFA3 /* FYNetWorkCache.m in Sources */,
 				211E7EE62160ADF4005C5302 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

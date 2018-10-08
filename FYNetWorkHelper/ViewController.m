@@ -23,10 +23,10 @@
                            @"since":@(0)
                            };
     NSString *url = @"https://api.kkmh.com/v1/daily/comic_lists/0";
-    [[FYNetWorkHelper shared] get:url parm:dict isCache:YES success:^(id response) {
-        NSLog(@"%@",response);
-    } failure:^(id response) {
-        NSLog(@"%@",response);
+    [FYNetworkHelper GET:url parameters:dict isCache:YES success:^(id responseObject) {
+        NSLog(@"%@",responseObject);
+    } failure:^(NSError *error, id cacheReponse) {
+        NSLog(@"%@",cacheReponse);
     }];
 }
 
