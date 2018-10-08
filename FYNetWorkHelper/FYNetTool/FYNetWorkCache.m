@@ -7,7 +7,7 @@
 //
 
 #import "FYNetWorkCache.h"
-#import <YYCache.h>
+#import "YYCache.h"
 
 static NSString *const NetworkResponseCache = @"FYNetworkResponseCache";
 static YYCache *_dataCache;
