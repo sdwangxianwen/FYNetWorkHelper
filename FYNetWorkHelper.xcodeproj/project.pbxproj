@@ -37,6 +37,7 @@
 		21F7703A216B427200B1AFA3 /* FYNetWorkCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FYNetWorkCache.m; sourceTree = "<group>"; };
 		21F7703B216B427200B1AFA3 /* FYNetWorkCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYNetWorkCache.h; sourceTree = "<group>"; };
 		21F7703C216B427200B1AFA3 /* FYNetWorkHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYNetWorkHelper.h; sourceTree = "<group>"; };
+		21F77041216B45F800B1AFA3 /* FYNetWorkHelper.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = FYNetWorkHelper.podspec; sourceTree = "<group>"; };
 		F643662FA33280E9C823140C /* Pods-FYNetWorkHelper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FYNetWorkHelper.release.xcconfig"; path = "Pods/Target Support Files/Pods-FYNetWorkHelper/Pods-FYNetWorkHelper.release.xcconfig"; sourceTree = "<group>"; };
 		FD640C1FB6040AF7BF3A53AE /* libPods-FYNetWorkHelper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FYNetWorkHelper.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -57,6 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				211E7F012160B038005C5302 /* PrefixHeader.pch */,
+				21F77041216B45F800B1AFA3 /* FYNetWorkHelper.podspec */,
 				211E7EE32160ADF4005C5302 /* FYNetWorkHelper */,
 				211E7EE22160ADF4005C5302 /* Products */,
 				9B1F85B41322EA718A0A5B39 /* Pods */,
