@@ -20,17 +20,26 @@
 }
 
 -(void)get:(NSString *)url parm:(id)parm isCache:(BOOL)isCache success:(successBlock)success failure:(failureBlock)failure {
-    [PPNetworkHelper GET:url parameters:parm responseCache:^(id responseCache) {
-        
-    } success:^(id responseObject) {
-        success(responseObject);
-    } failure:^(NSError *error) {
-        id cache = [PPNetworkCache httpCacheForURL:url parameters:parm];
-        if (cache && failure) {
-            failure(cache);
-        }else {
+    
+    if (isCache) {
+        //需要缓存
+        [PPNetworkHelper GET:url parameters:parm responseCache:^(id responseCache) {
+            
+        } success:^(id responseObject) {
+            success(responseObject);
+        } failure:^(NSError *error) {
+            id cache = [PPNetworkCache httpCacheForURL:url parameters:parm];
+            failure ?(cache != nil ? failure(cache): failure(error)) : nil;
+        }];
+    }  else {
+        //不需要缓存
+        [PPNetworkHelper GET:url parameters:parm success:^(id responseObject) {
+            success(responseObject);
+        } failure:^(NSError *error) {
             failure(error);
-        }
-    }];
+        }];
+    }
+    
+    
 }
 @end
