@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
 
 
 s.name                = "FYNetWorkHelper"
-s.version             = "1.0.1"
+s.version             = "1.0.2"
 s.summary             = "AFNetworking 与YYCache封装"
 s.homepage            = "https://github.com/sdwangxianwen/FYNetWorkHelper"
 s.license             = { :type => "Copyright", :text => "Copyright 2011 - 2018 UMeng.com. All rights reserved.\n" }
