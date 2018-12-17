@@ -9,8 +9,10 @@
 #import "AppDelegate.h"
 #import "FYNetTool/FYNetWorkHelper.h"
 #import <SVProgressHUD.h>
+#import <GTSDK/GeTuiSdk.h>
+#import <UserNotifications/UserNotifications.h>
 
-@interface AppDelegate ()
+@interface AppDelegate ()<GeTuiSdkDelegate, UNUserNotificationCenterDelegate>
 
 @end
 
@@ -18,6 +20,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    [self registerRemoteNotification];
+    
     if (![FYNetworkHelper isNetwork]) {
         [SVProgressHUD showErrorWithStatus:@"没有网络"];
     }
@@ -36,6 +41,31 @@
     // Override point for customization after application launch.
     return YES;
 }
+
+/** 注册 APNs */
+- (void)registerRemoteNotification {
+    // 通过个推平台分配的appId、 appKey 、appSecret 启动SDK，注：该方法需要在主线程中调用
+    [GeTuiSdk startSdkWithAppId:kGeTuiAppId appKey:kGeTuiAppKey appSecret:kGeTuiAppSecret delegate: self];
+    
+    if (@available(iOS 10.0, *)) {
+        UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+        center.delegate = self;
+        [center requestAuthorizationWithOptions:(UNAuthorizationOptionBadge | UNAuthorizationOptionSound | UNAuthorizationOptionAlert | UNAuthorizationOptionCarPlay) completionHandler:^(BOOL granted, NSError *_Nullable error) {
+            if (!error) {
+                NSLog(@"request authorization succeeded!");
+            }
+        }];
+        
+        [[UIApplication sharedApplication] registerForRemoteNotifications];
+    } else {
+        // Fallback on earlier versions
+        UIUserNotificationType types = (UIUserNotificationTypeAlert | UIUserNotificationTypeSound | UIUserNotificationTypeBadge);
+        UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:types categories:nil];
+        [[UIApplication sharedApplication] registerForRemoteNotifications];
+        [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
+    }
+}
+
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {

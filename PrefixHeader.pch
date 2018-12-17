@@ -12,6 +12,12 @@
 #import <YYCache.h>
 #import <YYModel.h>
 #import "FYNetWorkHelper/netTool.h"
+#define kGeTuiClientId (@"kGeTuiClientId")
+#define kIgnoreUserId (@"ignoreUserId")
+#define IS_LOCALTIME_ZONE  @"isLocalTimeZone"
+#define kGeTuiAppId @"qWlnCizPVs5GrqPIl3Z0G2"
+#define kGeTuiAppKey @"PbZjh62KFU8sEbaQTyq1N8"
+#define kGeTuiAppSecret @"Fjq5ikE2WQ8IooVKoeRLK4"
 
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.

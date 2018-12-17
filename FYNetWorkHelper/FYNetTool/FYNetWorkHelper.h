@@ -214,7 +214,7 @@ typedef void(^FYNetworkStatusBlock)(FYNetworkStatusType status);
 
 /**
  设置网络请求参数的格式
- 默认为二进制格式
+ 默认为JSON格式
  
  @param requestSerializer FYRequestSerializerTypeJSON(JSON格式),FYRequestSerializerTypeHTTP(二进制格式),
  */

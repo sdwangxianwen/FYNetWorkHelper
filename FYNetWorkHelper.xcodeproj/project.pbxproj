@@ -17,6 +17,8 @@
 		211E7EF72160ADF6005C5302 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 211E7EF62160ADF6005C5302 /* main.m */; };
 		21D3598921C3B64800B80952 /* netTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D3598821C3B64800B80952 /* netTool.m */; };
 		21D3598C21C3B88500B80952 /* NetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D3598B21C3B88500B80952 /* NetModel.m */; };
+		21D3599021C7754900B80952 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D3598F21C7754900B80952 /* User.m */; };
+		21D3599321C77ABF00B80952 /* NSString+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D3599221C77ABF00B80952 /* NSString+URLEncoding.m */; };
 		21F7703D216B427200B1AFA3 /* FYNetWorkHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F77039216B427200B1AFA3 /* FYNetWorkHelper.m */; };
 		21F7703E216B427200B1AFA3 /* FYNetWorkCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F7703A216B427200B1AFA3 /* FYNetWorkCache.m */; };
 /* End PBXBuildFile section */
@@ -39,6 +41,10 @@
 		21D3598821C3B64800B80952 /* netTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = netTool.m; sourceTree = "<group>"; };
 		21D3598A21C3B88500B80952 /* NetModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetModel.h; sourceTree = "<group>"; };
 		21D3598B21C3B88500B80952 /* NetModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetModel.m; sourceTree = "<group>"; };
+		21D3598E21C7754900B80952 /* User.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		21D3598F21C7754900B80952 /* User.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		21D3599121C77ABF00B80952 /* NSString+URLEncoding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+URLEncoding.h"; sourceTree = "<group>"; };
+		21D3599221C77ABF00B80952 /* NSString+URLEncoding.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+URLEncoding.m"; sourceTree = "<group>"; };
 		21F77039216B427200B1AFA3 /* FYNetWorkHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FYNetWorkHelper.m; sourceTree = "<group>"; };
 		21F7703A216B427200B1AFA3 /* FYNetWorkCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FYNetWorkCache.m; sourceTree = "<group>"; };
 		21F7703B216B427200B1AFA3 /* FYNetWorkCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYNetWorkCache.h; sourceTree = "<group>"; };
@@ -81,6 +87,7 @@
 		211E7EE32160ADF4005C5302 /* FYNetWorkHelper */ = {
 			isa = PBXGroup;
 			children = (
+				21D3598D21C7753200B80952 /* user */,
 				211E7EFD2160AF07005C5302 /* FYNetTool */,
 				211E7EE42160ADF4005C5302 /* AppDelegate.h */,
 				211E7EE52160ADF4005C5302 /* AppDelegate.m */,
@@ -109,6 +116,17 @@
 				21F77039216B427200B1AFA3 /* FYNetWorkHelper.m */,
 			);
 			path = FYNetTool;
+			sourceTree = "<group>";
+		};
+		21D3598D21C7753200B80952 /* user */ = {
+			isa = PBXGroup;
+			children = (
+				21D3598E21C7754900B80952 /* User.h */,
+				21D3598F21C7754900B80952 /* User.m */,
+				21D3599121C77ABF00B80952 /* NSString+URLEncoding.h */,
+				21D3599221C77ABF00B80952 /* NSString+URLEncoding.m */,
+			);
+			path = user;
 			sourceTree = "<group>";
 		};
 		9B1F85B41322EA718A0A5B39 /* Pods */ = {
@@ -239,8 +257,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21D3599321C77ABF00B80952 /* NSString+URLEncoding.m in Sources */,
 				211E7EE92160ADF4005C5302 /* ViewController.m in Sources */,
 				211E7EEF2160ADF4005C5302 /* FYNetWorkHelper.xcdatamodeld in Sources */,
+				21D3599021C7754900B80952 /* User.m in Sources */,
 				21D3598921C3B64800B80952 /* netTool.m in Sources */,
 				21F7703D216B427200B1AFA3 /* FYNetWorkHelper.m in Sources */,
 				211E7EF72160ADF6005C5302 /* main.m in Sources */,
@@ -397,7 +417,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = demo.FYNetWorkHelper;
+				PRODUCT_BUNDLE_IDENTIFIER = com.51talk.Teacher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -416,7 +436,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = demo.FYNetWorkHelper;
+				PRODUCT_BUNDLE_IDENTIFIER = com.51talk.Teacher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
