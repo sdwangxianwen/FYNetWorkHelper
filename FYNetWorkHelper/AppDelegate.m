@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "FYNetTool/FYNetWorkHelper.h"
+#import <SVProgressHUD.h>
 
 @interface AppDelegate ()
 
@@ -16,6 +18,21 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    if (![FYNetworkHelper isNetwork]) {
+        [SVProgressHUD showErrorWithStatus:@"没有网络"];
+    }
+    [FYNetworkHelper networkStatusWithBlock:^(FYNetworkStatusType status) {
+        NSLog(@"网络状态%ld",status);
+        if (status == FYNetworkStatusUnknown || status == FYNetworkStatusNotReachable ) {
+            //无网
+            [SVProgressHUD showErrorWithStatus:@"没有网络"];
+            
+        } else if(status == FYNetworkStatusReachableViaWWAN) {
+            //手机网络
+        } else {
+            //wifi
+        }
+    }];
     // Override point for customization after application launch.
     return YES;
 }

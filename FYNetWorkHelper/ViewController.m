@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import "FYNetTool/FYNetWorkHelper.h"
+#import "netTool.h"
+#import "NetModel.h"
 
 @interface ViewController ()
 
@@ -18,15 +20,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+   
+}
+
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     NSDictionary *dict = @{@"gender" :@(1),
                            @"new_device" :@(NO),
                            @"since":@(0)
                            };
     NSString *url = @"https://api.kkmh.com/v1/daily/comic_lists/0";
-    [FYNetworkHelper GET:url parameters:dict isCache:YES success:^(id responseObject) {
-        NSLog(@"%@",responseObject);
-    } failure:^(NSError *error, id cacheReponse) {
-        NSLog(@"%@",cacheReponse);
+    [[netTool share] getData:url parm:dict modelClass:[data class] isCache:YES isShowLoadHUD:YES isShowErrorHUD:YES success:^(id response) {
+        
     }];
 }
 

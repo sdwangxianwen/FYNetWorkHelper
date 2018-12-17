@@ -15,6 +15,8 @@
 		211E7EF12160ADF6005C5302 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 211E7EF02160ADF6005C5302 /* Assets.xcassets */; };
 		211E7EF42160ADF6005C5302 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 211E7EF22160ADF6005C5302 /* LaunchScreen.storyboard */; };
 		211E7EF72160ADF6005C5302 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 211E7EF62160ADF6005C5302 /* main.m */; };
+		21D3598921C3B64800B80952 /* netTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D3598821C3B64800B80952 /* netTool.m */; };
+		21D3598C21C3B88500B80952 /* NetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D3598B21C3B88500B80952 /* NetModel.m */; };
 		21F7703D216B427200B1AFA3 /* FYNetWorkHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F77039216B427200B1AFA3 /* FYNetWorkHelper.m */; };
 		21F7703E216B427200B1AFA3 /* FYNetWorkCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F7703A216B427200B1AFA3 /* FYNetWorkCache.m */; };
 /* End PBXBuildFile section */
@@ -33,6 +35,10 @@
 		211E7EF52160ADF6005C5302 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		211E7EF62160ADF6005C5302 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		211E7F012160B038005C5302 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		21D3598721C3B64800B80952 /* netTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = netTool.h; sourceTree = "<group>"; };
+		21D3598821C3B64800B80952 /* netTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = netTool.m; sourceTree = "<group>"; };
+		21D3598A21C3B88500B80952 /* NetModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetModel.h; sourceTree = "<group>"; };
+		21D3598B21C3B88500B80952 /* NetModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetModel.m; sourceTree = "<group>"; };
 		21F77039216B427200B1AFA3 /* FYNetWorkHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FYNetWorkHelper.m; sourceTree = "<group>"; };
 		21F7703A216B427200B1AFA3 /* FYNetWorkCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FYNetWorkCache.m; sourceTree = "<group>"; };
 		21F7703B216B427200B1AFA3 /* FYNetWorkCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYNetWorkCache.h; sourceTree = "<group>"; };
@@ -80,6 +86,10 @@
 				211E7EE52160ADF4005C5302 /* AppDelegate.m */,
 				211E7EE72160ADF4005C5302 /* ViewController.h */,
 				211E7EE82160ADF4005C5302 /* ViewController.m */,
+				21D3598A21C3B88500B80952 /* NetModel.h */,
+				21D3598B21C3B88500B80952 /* NetModel.m */,
+				21D3598721C3B64800B80952 /* netTool.h */,
+				21D3598821C3B64800B80952 /* netTool.m */,
 				211E7EEA2160ADF4005C5302 /* Main.storyboard */,
 				211E7EF02160ADF6005C5302 /* Assets.xcassets */,
 				211E7EF22160ADF6005C5302 /* LaunchScreen.storyboard */,
@@ -129,6 +139,7 @@
 				211E7EDD2160ADF4005C5302 /* Sources */,
 				211E7EDE2160ADF4005C5302 /* Frameworks */,
 				211E7EDF2160ADF4005C5302 /* Resources */,
+				07BD9F1A24791CF3F41C52E4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -185,6 +196,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		07BD9F1A24791CF3F41C52E4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FYNetWorkHelper/Pods-FYNetWorkHelper-resources.sh",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FYNetWorkHelper/Pods-FYNetWorkHelper-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		38D9EE41E1E5FDC2F85DAE2F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -212,8 +241,10 @@
 			files = (
 				211E7EE92160ADF4005C5302 /* ViewController.m in Sources */,
 				211E7EEF2160ADF4005C5302 /* FYNetWorkHelper.xcdatamodeld in Sources */,
+				21D3598921C3B64800B80952 /* netTool.m in Sources */,
 				21F7703D216B427200B1AFA3 /* FYNetWorkHelper.m in Sources */,
 				211E7EF72160ADF6005C5302 /* main.m in Sources */,
+				21D3598C21C3B88500B80952 /* NetModel.m in Sources */,
 				21F7703E216B427200B1AFA3 /* FYNetWorkCache.m in Sources */,
 				211E7EE62160ADF4005C5302 /* AppDelegate.m in Sources */,
 			);

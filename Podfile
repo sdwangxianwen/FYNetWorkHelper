@@ -5,5 +5,7 @@ target 'FYNetWorkHelper' do
 pod 'AFNetworking'
 pod 'YYCache'
 pod 'PPNetworkHelper'
+pod 'YYModel'
+pod 'SVProgressHUD'
  
 end
