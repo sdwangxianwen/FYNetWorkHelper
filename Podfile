@@ -11,5 +11,6 @@ pod 'YYModel'
 pod 'SVProgressHUD'
 pod 'SNSFHFKeychainUtils', '~> 1.0.0'
 pod 'GTSDK', '2.0.0.0-noidfa'
+pod 'YYKit'
  
 end

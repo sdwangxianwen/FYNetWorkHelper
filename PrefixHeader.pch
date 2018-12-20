@@ -19,6 +19,11 @@
 #define kGeTuiAppKey @"PbZjh62KFU8sEbaQTyq1N8"
 #define kGeTuiAppSecret @"Fjq5ikE2WQ8IooVKoeRLK4"
 
+#define kStatusBarHeight CGRectGetHeight([[UIApplication sharedApplication] statusBarFrame])
+#define kNavigationBarHeight 44
+#define kTabBarHeight (deviceIsIPhoneX()?83:49)
+#define kHomeBottomBarHeight (deviceIsIPhoneX()?34:0) //全面屏底部的控制条高度
+
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
