@@ -89,5 +89,29 @@ static NSMutableCharacterSet* emptyStringSet = nil;
     NSString* str = [self stringByTrimmingCharactersInSet:emptyStringSet];
     return [str length] > 0;
 }
+//魔法交换
+void SwizzleClassMethod(id c, SEL orig, SEL new1, BOOL isClassMethod) {
+    
+    if (isClassMethod) {
+        Method origMethod = class_getClassMethod(c, orig);
+        Method newMethod = class_getClassMethod(c, new1);
+        
+        c = object_getClass((id)c);
+        
+        if(class_addMethod(c, orig, method_getImplementation(newMethod), method_getTypeEncoding(newMethod)))
+            class_replaceMethod(c, new1, method_getImplementation(origMethod), method_getTypeEncoding(origMethod));
+        else {
+            method_exchangeImplementations(origMethod, newMethod);
+        }
+    } else {
+        
+        Method original, swizzled;
+        
+        original = class_getInstanceMethod(c, orig);
+        swizzled = class_getInstanceMethod(c, new1);
+        method_exchangeImplementations(original, swizzled);
+        
+    }
+}
 
 @end
